@@ -13,11 +13,17 @@ C:\xampp\apache\conf\extra    ( อาจจะไม่ใช่ ไดร์ C
 เพิ่ม ตัวล่างนี้ลงไป
 
 <VirtualHost *:80>
+
     ServerAdmin project.shop.com
+
     DocumentRoot "C:/xampp/htdocs/project_shop/public/"
+
     ServerName  project.shop.com   
+
     ##ErrorLog "logs/dummy-host2.example.com-error.log"
+
     ##CustomLog "logs/dummy-host2.example.com-access.log" common
+
 </VirtualHost>
 
 แล้ว Save
