@@ -1,4 +1,4 @@
-READ ME ( อ่านด้วย )
+﻿READ ME ( อ่านด้วย )
 
 ถ้า Coppy ไปแล้ว ทำ visual host ด้วย
 
@@ -39,6 +39,14 @@ C:\Windows\System32\drivers\etc
 127.0.0.1	project.shop.com
 
 แล้ว Save ทับ อันเดิม
+
+Database ที่ใช้เป็น Localhost
+
+ให้ Import ไฟล์ sql ที่อยู่ใน Folder  _Data_
+
+ลงใน LocalhostphpMyadmin ด้วย
+
+( ใช้ชื่อตอน import อันนี้  project_shop หรือถ้าตั้งเองใหม่ ก็ไปเปลี่ยนในโปรแกรมด้วย  )
 
 จบครับ รอเหี้ยไรล่ะ
 .
