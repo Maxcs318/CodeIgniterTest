@@ -34,7 +34,7 @@ C:\xampp\apache\conf\extra    ( อาจจะไม่ใช่ ไดร์ C
 
 C:\Windows\System32\drivers\etc
 
-หาไฟล์  hosts เปิด โดยใช้ Node Pad 
+หาไฟล์  hosts เปิด โดยใช้ Node Pad  ( ถ้าไม่มีไฟล์นี้ ไปหาโหลดเอาตามเว็ปได้ครับ )
 
 เพิ่ม ตัวล่างนี้ลงไป
 
@@ -52,7 +52,8 @@ Database ที่ใช้เป็น Localhost
 
 ส่วน username , password สำหรับเข้า phpmyadmin อันนี้ที่เซทไว้เป็น (username --> 'root', password --> '')
 
-ไปเปลี่ยนเอาเองได้ถ้ามันไม่ตรงกัน เปลี่ยนที่ไฟล์ 
+ไปเปลี่ยนเอาเองได้ถ้ามันไม่ตรงกัน เปลี่ยนที่ไฟล์ ( มีให้เปลี่ยนหมด ทั้งชื่อ database name,username ,password , ฯ )
+
 C:\xampp\htdocs\CodeIgniterTest\work\config\database.php
 
 จบครับ รอเหี้ยไรล่ะ
