@@ -1,6 +1,8 @@
 ﻿READ ME ( อ่านด้วย )
 
-ถ้า Coppy ไปแล้ว ทำ visual host ด้วย
+ถ้า Coppy ไปแล้ว ทำ visual host ด้วย 
+
+-->   เอาไฟล์ที่ลง ไว้ใน xampp\htdocs   <--
 
 ขั้นตอนการทำ 
 
@@ -47,6 +49,11 @@ Database ที่ใช้เป็น Localhost
 ลงใน LocalhostphpMyadmin ด้วย
 
 ( ใช้ชื่อตอน import อันนี้  project_shop หรือถ้าตั้งเองใหม่ ก็ไปเปลี่ยนในโปรแกรมด้วย  )
+
+ส่วน username , password สำหรับเข้า phpmyadmin อันนี้ที่เซทไว้เป็น (username --> 'root', password --> '')
+
+ไปเปลี่ยนเอาเองได้ถ้ามันไม่ตรงกัน เปลี่ยนที่ไฟล์ 
+C:\xampp\htdocs\CodeIgniterTest\work\config\database.php
 
 จบครับ รอเหี้ยไรล่ะ
 .
