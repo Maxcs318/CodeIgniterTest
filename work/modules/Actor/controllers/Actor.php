@@ -74,6 +74,18 @@ class Actor extends MX_Controller {
 
     }
 
+    public function do_delete()
+    {
+        $id=$this->input->get('delete_id');
+
+        $this->load->model('actor_model');
+        $this->actor_model->delete_member($id);
+        
+        $_SESSION['chk']='delete_success';
+        
+        redirect($_SERVER['HTTP_REFERER']);
+
+    }
 
 }
 ?>

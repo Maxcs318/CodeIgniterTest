@@ -20,5 +20,11 @@
             $this->db->where('m_id', $_SESSION['id']);
             $this->db->update('member', $my_id);
         }
+
+        public function delete_member($id)
+        {
+            $this->db->where('m_id', $id);
+            $this->db->delete('member');
+        }
     }
 ?>
