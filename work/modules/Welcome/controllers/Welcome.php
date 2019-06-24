@@ -22,20 +22,15 @@ class Welcome extends MX_Controller {
 	{
 		$username=$this->input->post('username');
 		$password=$this->input->post('password');
-		
-		if($username!=''&&$password!=''){
 
 			$this->load->model('welcome_model');
-        	$this->welcome_model->check_User($username,$password);
+        	$data['chk_row']=$this->welcome_model->check_User($username,$password);
 			
+			if(sizeof($data['chk_row'])==0){
+				$_SESSION['chk']='login_fail';
+			}
 			redirect(base_url(),'refresh');
-			
-		}else{
-			// กรณีนี้ไม่เกิดขึ้น หากดัก Required ไว้ตั้งแต่หน้าเว็ป
-			redirect(base_url(),'refresh');
-		}	
 		
-
 	}
 
 	public function logout()

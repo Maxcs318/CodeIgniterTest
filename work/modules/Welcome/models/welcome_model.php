@@ -16,9 +16,6 @@
 					$_SESSION['status']=$row->m_status;
 					$_SESSION['status2']=$row->m_status;
 				}
-			}else{
-				$_SESSION['chk']='login_fail';
-				redirect(base_url(),'refresh');
 			}
             
         }

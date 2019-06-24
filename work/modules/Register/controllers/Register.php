@@ -38,6 +38,7 @@ class Register extends MX_Controller {
             );
         $this->load->model('register_model');
         $this->register_model->insert_member($new_member);
+        $_SESSION['chk']='register_success';
         
         redirect(base_url(),'refresh');
     }

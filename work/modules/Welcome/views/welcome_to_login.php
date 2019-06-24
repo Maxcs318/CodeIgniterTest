@@ -12,7 +12,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- ajax google -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
-	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> <!-- sweetalert-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> <!-- sweetalert-->
+    
 </head>
 <body>
 
@@ -24,9 +26,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <center><h2>Login</h2></center>
                 <hr>
                 <b><h4>Username</h4></b>
+
                 <input class="form-control" type="text" name="username" required>
                 <b><h4>Password</h4></b>
                 <input class="form-control" type="password" name="password" required>
+                <br>
+                
+                
+                <font color="red"><center>
+                <?php
+                    if(isset($_SESSION['chk'])){
+                        if( $_SESSION['chk']=='login_fail'){
+                            echo 'User or Password Incorrect';
+                        }
+                    }
+                ?>
+                </center></font>
+                
                 <br>
                 <button type="submit" class="form-control btn-primary"> Login </button>
             </form>
@@ -41,6 +57,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
 </div>
-
+    <script>
+        <?php if(isset($_SESSION['chk']) ){
+                if($_SESSION['chk']=='register_success' ){
+            ?>
+            swal({
+                title: "Register Success",
+                text: "Welcome To project.shop.com ",
+                type: "success",
+                confirmButtonText: 'Yes.',            
+            });
+        <?php   }
+             }  ?>
+    </script>
+<?php $_SESSION['chk']=''?>
 </body>
 </html>

@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <li class="nav-item active">
           <a class="nav-link" href="<?php echo base_url('actor/editmember'); ?>">
-            <h5>Edit</h5>  
+            <h5>Edit Profile</h5>  
           </a>
         </li>
 
