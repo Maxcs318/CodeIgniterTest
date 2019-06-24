@@ -26,13 +26,13 @@ class Actor extends MX_Controller {
         }else{
             $_SESSION['status']='admin';
         }
-        redirect(base_url(),'refresh');
+        redirect($_SERVER['HTTP_REFERER']);
     }
 
     public function returnToGod()
     {   
         $_SESSION['status']='God';
-        redirect(base_url(),'refresh');
+        redirect($_SERVER['HTTP_REFERER']);
     }
 
     public function editmember()
