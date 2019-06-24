@@ -7,6 +7,12 @@
             $query=$this->db->get('member');
             return $query->result();
         }
+        /////
+        public function get_all_memberdata()
+        {
+            return json_encode($this->db->get('member')->result());
+        }
+        /////
 
         public function get_my_id()
         {

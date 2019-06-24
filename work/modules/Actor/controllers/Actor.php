@@ -4,12 +4,13 @@ class Actor extends MX_Controller {
 
 	public function __construct()
 	{
-		parent::__construct();
+        parent::__construct();
+        $this->load->model('actor_model');
+
     }
 
     public function index()
     {   
-        $this->load->model('actor_model');
         $data['member'] = $this->actor_model->get_all_member();
 
         $this->load->view('template/header');
@@ -17,6 +18,13 @@ class Actor extends MX_Controller {
         $this->load->view('template/footer');
 
     }
+    /////
+    public function api()
+    {
+        echo $this->actor_model->get_all_memberdata();
+        // $this->load->view('allmember',$data);
+    }
+    /////
     public function changeStatus()
     {   
         if($_SESSION['status']=='admin'){
@@ -37,7 +45,6 @@ class Actor extends MX_Controller {
 
     public function editmember()
     {   
-        $this->load->model('actor_model');
         $data['myID'] = $this->actor_model->get_my_id();
 
         $this->load->view('template/header');
@@ -64,7 +71,6 @@ class Actor extends MX_Controller {
             
         );
         
-        $this->load->model('actor_model');
         $this->actor_model->edit_my_id($my_id);
 
         $this->load->model('welcome/welcome_model');
@@ -78,7 +84,6 @@ class Actor extends MX_Controller {
     {
         $id=$this->input->get('delete_id');
 
-        $this->load->model('actor_model');
         $this->actor_model->delete_member($id);
         
         $_SESSION['chk']='delete_success';
