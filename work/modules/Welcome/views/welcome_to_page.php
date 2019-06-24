@@ -18,19 +18,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 col-xs-12">
-			<!-- <center>
-			<h2>Wellcome To This Page. <br> -->
-				<?php //echo $_SESSION['username']; ?>
-				<!-- Your Status  -->
-				<?php //echo $_SESSION['status']; ?>
-			</h2>
-			<?php //echo $_SESSION['id']; ?>
-			<!-- </center> -->
+			
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-lg-12 col-xs-12">
+
+		
+
+
 
 		</div>
 

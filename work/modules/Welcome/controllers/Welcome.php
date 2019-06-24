@@ -24,23 +24,12 @@ class Welcome extends MX_Controller {
 		$password=$this->input->post('password');
 		
 		if($username!=''&&$password!=''){
-			$this->db->where('m_username',$username);
-			$this->db->where('m_password',$password);
-			$query = $this->db->get('member');
-			if($query->result()>0){
-				foreach ($query->result() as $row)
-				{
-					$_SESSION['id']=$row->m_id;
-					$_SESSION['username']=$row->m_username;
-					$_SESSION['status']=$row->m_status;
-					$_SESSION['status2']=$row->m_status;
-				}
-				redirect(base_url(),'refresh');
-			}else{
-				$_SESSION['chk']='login_fail';
-				redirect(base_url(),'refresh');
-			}
 
+			$this->load->model('welcome_model');
+        	$this->welcome_model->check_User($username,$password);
+			
+			redirect(base_url(),'refresh');
+			
 		}else{
 			// กรณีนี้ไม่เกิดขึ้น หากดัก Required ไว้ตั้งแต่หน้าเว็ป
 			redirect(base_url(),'refresh');

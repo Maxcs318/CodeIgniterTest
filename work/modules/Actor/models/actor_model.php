@@ -8,6 +8,17 @@
             return $query->result();
         }
 
+        public function get_my_id()
+        {
+            $this->db->where('m_id', $_SESSION['id']);
+            $query=$this->db->get('member');
+            return $query->result();
+        }
 
+        public function edit_my_id($my_id)
+        { 
+            $this->db->where('m_id', $_SESSION['id']);
+            $this->db->update('member', $my_id);
+        }
     }
 ?>
